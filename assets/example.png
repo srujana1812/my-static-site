@@ -1,0 +1,7 @@
+from PIL import Image, ImageDraw
+
+img = Image.new('RGB', (300, 200), color=(240, 240, 240))
+draw = ImageDraw.Draw(img)
+draw.rectangle([20, 20, 280, 180], outline="red", width=4)
+draw.text((100, 90), "Example Image", fill="red")
+img.save('assets/example.png')
